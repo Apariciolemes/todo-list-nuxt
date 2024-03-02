@@ -13,8 +13,8 @@ describe('TasksList', () => {
         const wrapper = mount(TaskList, {
             props: {
                 listTasks: [
-                    { id: 1, name: 'Task 1', status: false },
-                    { id: 2, name: 'Task 2', status: false },
+                    { id: 1, task: 'Task 1', status: false },
+                    { id: 2, task: 'Task 2', status: false },
                 ]
             }
         })
@@ -29,8 +29,8 @@ describe('TasksList', () => {
         const wrapper = mount(TaskList, {
             props: {
                 listTasks: [
-                    { id: 1, name: 'Task 1' },
-                    { id: 2, name: 'Task 2' },
+                    { id: 1, task: 'Task 1' },
+                    { id: 2, task: 'Task 2' },
                 ]
             }
         })
@@ -47,6 +47,25 @@ describe('TasksList', () => {
         })
 
         expect(wrapper.find('.list-tasks').exists()).toBe(false)
+    })
+
+    it('correct label status and tasks', () => {
+        const wrapper = mount(TaskList, {
+            props: {
+                listTasks: [
+                    { id: 1, task: 'Task 1', status: false },
+                    { id: 2, task: 'Task 2', status: true },
+                ]
+            }
+        })
+
+        const listTasks = wrapper.findAll('li');
+        const firstTask = listTasks[0].findAll('button')[0]?.text();
+        const secondTask = listTasks[1].findAll('button')[0]?.text();
+
+        expect(firstTask).toBe('Pendente')
+        expect(secondTask).toBe('Concluído')
+
     })
 
 })
