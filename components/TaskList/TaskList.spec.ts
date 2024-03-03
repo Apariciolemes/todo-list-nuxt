@@ -1,7 +1,7 @@
 // tests/components/SomeComponents.nuxt.spec.ts
 import { describe, it, expect } from 'vitest'
 import { mount, } from '@vue/test-utils'
-import TaskList from '../components/TaskList.vue'
+import TaskList from './TaskList.vue'
 
 describe('TasksList', () => {
     it('should render ListTaks component', () => {
@@ -13,8 +13,8 @@ describe('TasksList', () => {
         const wrapper = mount(TaskList, {
             props: {
                 listTasks: [
-                    { id: 1, task: 'Task 1', status: false },
-                    { id: 2, task: 'Task 2', status: false },
+                    { task: 'Task 1', status: false },
+                    { task: 'Task 2', status: false },
                 ]
             }
         })
@@ -29,8 +29,8 @@ describe('TasksList', () => {
         const wrapper = mount(TaskList, {
             props: {
                 listTasks: [
-                    { id: 1, task: 'Task 1' },
-                    { id: 2, task: 'Task 2' },
+                    { task: 'Task 1', status: false },
+                    { task: 'Task 2', status: false },
                 ]
             }
         })
@@ -53,8 +53,8 @@ describe('TasksList', () => {
         const wrapper = mount(TaskList, {
             props: {
                 listTasks: [
-                    { id: 1, task: 'Task 1', status: false },
-                    { id: 2, task: 'Task 2', status: true },
+                    { task: 'Task 1', status: false },
+                    { task: 'Task 2', status: true },
                 ]
             }
         })
@@ -68,4 +68,18 @@ describe('TasksList', () => {
 
     })
 
+    it('should cross out the text when status is concluded', () => {
+        const wrapper = mount(TaskList, {
+            props: {
+                listTasks: [
+                    { task: 'Task 1', status: true },
+                ]
+            }
+        })
+
+        const listTasks = wrapper.findAll('li');
+        const firstTask = listTasks[0].findAll('label')[0]
+
+        expect(firstTask.element.style.textDecoration).toBe('line-through')
+    })
 })

@@ -1,6 +1,6 @@
 <script lang="ts"setup>
-import TaskForm from './components/TaskForm.vue';
-import TaskList from './components/TaskList.vue';
+import TaskForm from './components/TaskForm/TaskForm.vue';
+import TaskList from './components/TaskList/TaskList.vue';
 
 import { type Task } from './types/Task';
 
@@ -24,18 +24,15 @@ const handleToogleStatusTask = (indexToogle: number) => {
     }
   })
 }
-
-
-
 </script>
 
 <template>
   <div class="container">
+      <h1>Tarefas</h1>:
       <TaskForm @emit-add="handleAddTask" />
       <TaskList :list-tasks="listTasks"  @emit-status="handleToogleStatusTask" @emit-delete="handleDeleteTask"/>
   </div>
 </template>
-
 
 <style>
 .container {
@@ -44,8 +41,5 @@ const handleToogleStatusTask = (indexToogle: number) => {
   padding: 100px 0;
 }
 
-button {
-  height: 34px;
-  min-width: 100px;
-}
+
 </style>

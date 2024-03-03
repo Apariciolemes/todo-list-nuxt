@@ -1,13 +1,11 @@
+<script lang="ts" setup>
+import { defineModel} from 'vue';
+const value = defineModel('value')
+</script>
+
 <template>
   <input v-model="value">
 </template>
-
-<script lang="ts" setup>
-import { defineModel} from 'vue';
-
-const value = defineModel('value')
-
-</script>
 
 <style>
 input {
