@@ -1,75 +1,66 @@
-# Nuxt 3 Minimal Starter
+# Projeto de Todo-List em Nuxt 3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Este é um projeto de todo-list desenvolvido em Nuxt 3 com TypeScript, utilizando Vite como bundler, Vitest para testes e integrando Google Fonts para fontes.
 
-## Setup
+## Funcionalidades
 
-Make sure to install the dependencies:
+- Adicionar novas tasks
+- Editar o status das tasks
+- Concluir tasks
 
-```bash
-# npm
-npm install
+## Como Rodar
 
-# pnpm
-pnpm install
+Para rodar o projeto localmente, siga os passos abaixo:
 
-# yarn
-yarn install
+1. Certifique-se de ter o Node.js instalado em sua máquina na versão >= 18.
+2. Clone este repositório:
+   ```sh
+   git clone <https://github.com/Apariciolemes/todo-list-nuxt.git>
+   ```
+3. Navegue até o diretório do projeto:
+   ```sh
+   cd todo-list-nuxt
+   ```
+4. Instale as dependências do projeto:
+   ```sh
+   yarn install
+   ```
+5. Para iniciar o servidor de desenvolvimento, execute:
+   ```sh
+   yarn dev
+   ```
+6. Abra o navegador e acesse `http://localhost:3000` para visualizar a aplicação.
 
-# bun
-bun install
+## Como Testar
+
+Para executar os testes, execute o seguinte comando:
+```sh
+yarn test
 ```
+Isso iniciará a execução dos testes utilizando Vitest.
 
-## Development Server
+## Evidências de Testes/Coverage
 
-Start the development server on `http://localhost:3000`:
+https://easyimg.io/g/4prxyzuay
 
-```bash
-# npm
-npm run dev
+![Evidência de Testes/Coverage](https://easyimg.io/g/4prxyzuay)
 
-# pnpm
-pnpm run dev
+## Link da Todo-List
 
-# yarn
-yarn dev
+![Todo List](https://todo-list-nuxt.vercel.app/)
 
-# bun
-bun run dev
-```
+## Tecnologias Utilizadas
 
-## Production
+- Nuxt 3
+- TypeScript
+- Vite
+- Vitest
+- Vue Test Utils
+- Google Fonts
+- Vercel
 
-Build the application for production:
+## Autor
 
-```bash
-# npm
-npm run build
+[Aparicio Lemes Neto] - [lemes.devs@gmail.com]
 
-# pnpm
-pnpm run build
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
