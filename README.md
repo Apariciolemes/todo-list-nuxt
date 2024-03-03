@@ -8,6 +8,16 @@ Este é um projeto de todo-list desenvolvido em Nuxt 3 com TypeScript, utilizand
 - Editar o status das tasks
 - Concluir tasks
 
+## Tecnologias Utilizadas
+
+- Nuxt 3
+- TypeScript
+- Vite
+- Vitest
+- Vue Test Utils
+- Google Fonts
+- Vercel
+
 ## Como Rodar
 
 Para rodar o projeto localmente, siga os passos abaixo:
@@ -47,15 +57,6 @@ Isso iniciará a execução dos testes utilizando Vitest.
 
 [Vercel - Todo List](https://todo-list-nuxt.vercel.app/)
 
-## Tecnologias Utilizadas
-
-- Nuxt 3
-- TypeScript
-- Vite
-- Vitest
-- Vue Test Utils
-- Google Fonts
-- Vercel
 
 ## Autor
 
