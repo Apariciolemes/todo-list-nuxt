@@ -41,13 +41,11 @@ Isso iniciará a execução dos testes utilizando Vitest.
 
 ## Evidências de Testes/Coverage
 
-https://easyimg.io/g/4prxyzuay
-
-![Evidência de Testes/Coverage](https://easyimg.io/g/4prxyzuay)
+<img align="center"  src="assets/coverage.png" />
 
 ## Link da Todo-List
 
-![Todo List](https://todo-list-nuxt.vercel.app/)
+[Vercel - Todo List](https://todo-list-nuxt.vercel.app/)
 
 ## Tecnologias Utilizadas
 
