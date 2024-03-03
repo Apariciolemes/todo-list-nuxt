@@ -15,7 +15,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 1. Certifique-se de ter o Node.js instalado em sua máquina na versão >= 18.
 2. Clone este repositório:
    ```sh
-   git clone <https://github.com/Apariciolemes/todo-list-nuxt.git>
+   git clone https://github.com/Apariciolemes/todo-list-nuxt.git
    ```
 3. Navegue até o diretório do projeto:
    ```sh
